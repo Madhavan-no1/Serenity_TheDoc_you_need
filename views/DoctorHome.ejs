@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #ff0;
+            background-color: black;
+            
+        }
+        a { 
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px 0;
+        }
+        header .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #ff0;
+            margin-right: 200px;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+            
+            align-items: end;
+            justify-content: end;
+            position: relative;
+            left: 10px;
+            
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: #ff0;
+            font-weight: 600;
+        }
+        .cta-button {
+            background-color: #ff0;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            
+        }
+        .cta-button:hover {
+            background-color: black;
+            color: #ff0;
+            border: 1px solid #ff0;
+
+        }
+        
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            height: 100vh;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            color: #ff0;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #ff0;    
+            margin-right: 50px;
+        }
+        .hero-content .hero-cta {
+            margin-top: 20px;
+        }
+        .hero-image {
+            max-width: 40%;
+        }
+        .hero-image img {
+            
+            border-radius: 10px;
+        }
+        
+        .features {
+            background-color: black;
+            padding: 60px 0;
+            text-align: center;
+            height: 100vh;
+        }
+        .features h2 {
+            color: #ff0;
+            margin-bottom: 40px;
+        }
+        .feature-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+        .feature-card {
+            background-color: black;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #ff0;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px #ff0;
+        }
+        .feature-card i {
+            font-size: 2.5em;
+            color: #ff0;
+            margin-bottom: 20px;
+        }
+        
+        .testimonials {
+            padding: 60px 0;
+            height: 100vh;
+        }
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .testimonial {
+            background-color: #333;
+            color: #ff0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial .author {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        footer {
+            background-color: black;
+            color: #ff0;
+            padding: 30px 0;
+            text-align: center;
+        }
+        footer .social-icons i {
+            margin: 20px 30px;
+            color: #fff;
+            font-size: 1.5em;
+        }
+        footer .social-icons i:hover{
+            color: #ff0;
+            scale: 1.5;
+            transition: .5s;
+        }
+        .two{
+            margin-top: 110px;
+        }
+        .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust space between buttons */
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="container">
+        <div class="logo">Welcome Doctor </div>
+        <nav>
+            <ul>
+                <li><a href="#vision" class="cta-button scroll-link">Upload Scans</a></li>
+                <li><a href="#features" class="cta-button scroll-link">Features</a></li>
+                <li><a href="#testimonials" class="cta-button scroll-link">Reviews</a></li>
+                <li><a href="http://localhost:3000/" class="cta-button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <h1>Your Personal Health Assistant</h1>
+            <h1> With AceCare</h1>
+            <p>Get medical advice, schedule appointments, and manage your health effortlessly with our AI-powered chatbot.</p>
+            <div class="hero-cta">
+                <a href="#" class="cta-button">Try Now</a>
+            </div>
+        </div>
+      
+    </section>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero container two" id="vision">
+       
+        <div class="hero-image" >
+            <!-- Updated Image URL -->
+            <img src="images/Scan.png" style="position: absolute;top: 1000px;left: 150px;width: 500px;height: 500px;">
+        </div>
+        <div class="hero-content">
+                <h1> Scan Your Reports</h1>
+                <h1> AceCare</h1>
+                <p>Get medical advice.</p>
+                <div class="button-grid">
+                    <a href="https://pneumonia-ml-model-64021107941.asia-south1.run.app/" class="cta-button">Pnemonia Tester</a>
+                    <a href="https://cancer-classification-ml-model-931009733685.asia-south1.run.app/" class="cta-button">Cancer Lesion Tester</a>
+                    <a href="#" class="cta-button">Brain MRI Tester</a>
+                    <a href="https://med-vision-r2g8.onrender.com/" class="cta-button">MedVision</a>
+                </div>
+                
+        </div>
+        
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 style="color: #ff0;">Why Choose Our Chatbot?</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>24/7 Availability</h3>
+                    <p>Get expert medical advice anytime, anywhere.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-notes-medical"></i>
+                    <h3>Personalized Responses</h3>
+                    <p>Receive tailored advice based on your symptoms and history.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Data Privacy</h3>
+                    <p>Your data is safe with end-to-end encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"HealthBot has transformed how I manage my health. It's like having a doctor available 24/7."</p>
+                <div class="author">- Jane Doe</div>
+            </div>
+            <div class="testimonial">
+                <p>"The personalized advice and easy appointment scheduling have made my life so much easier!"</p>
+                <div class="author">- John Smith</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HealthBot. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.scroll-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                // Custom scroll behavior
+                window.scrollTo({
+                    top: targetElement.offsetTop, // Adjust for the fixed navbar
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

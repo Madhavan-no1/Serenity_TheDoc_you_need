@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Password</title>
+    <link rel="stylesheet" href="css/createstyle.css">
+</head>
+
+<body>
+    <div class="wrapper create-wrapper">
+        <span class="rotate-bg"></span>
+        <span class="rotate-bg2"></span>
+
+        <div class="form-box create-box">
+            <h2 class="title animation">Create New Password</h2>
+
+            <form id="password-form" action="/createpasspatient" method="POST">
+                <div class="input-box animation">
+                    <input type="password" id="new-password" required>
+                    <label for="new-password">New Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                    <i class='bx bx-show' id="toggle-new-password"></i>
+                </div>
+                <div class="input-box animation">
+                    <input type="password" id="confirm-password" name="newpassword" required>
+                    <label for="confirm-password">Confirm Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                    <i class='bx bx-show' id="toggle-confirm-password"></i>
+                </div>
+                <div class="showpass">
+                    <input type="checkbox" id="show-pass"><span>Show Passwords</span>
+                </div>
+                <button type="submit" class="btn animation">Reset Password</button>
+            </form>
+        </div>
+
+        <div class="info-text create-info">
+            <h2 class="animation">Set Your New Password</h2>
+            <p class="animation">Please enter and confirm your new password to reset your account password.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const toggleNewPassword = document.getElementById('toggle-new-password');
+    const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+    const newPasswordInput = document.getElementById('new-password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const showPassCheckbox = document.getElementById('show-pass');
+    const form = document.getElementById('password-form');
+
+    const togglePasswordVisibility = () => {
+        const type = newPasswordInput.type === 'password' ? 'text' : 'password';
+        newPasswordInput.type = type;
+        confirmPasswordInput.type = type;
+    };
+
+    toggleNewPassword.addEventListener('click', () => {
+        togglePasswordVisibility();
+        toggleNewPassword.classList.toggle('bx-show');
+        toggleNewPassword.classList.toggle('bx-hide');
+    });
+
+    toggleConfirmPassword.addEventListener('click', () => {
+        togglePasswordVisibility();
+        toggleConfirmPassword.classList.toggle('bx-show');
+        toggleConfirmPassword.classList.toggle('bx-hide');
+    });
+
+    showPassCheckbox.addEventListener('change', () => {
+        if (showPassCheckbox.checked) {
+            newPasswordInput.type = 'text';
+            confirmPasswordInput.type = 'text';
+        } else {
+            newPasswordInput.type = 'password';
+            confirmPasswordInput.type = 'password';
+        }
+    });
+
+    const validatePasswords = () => {
+        const newPassword = newPasswordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (newPassword !== confirmPassword) {
+            confirmPasswordInput.classList.add('error');
+        } else {
+            confirmPasswordInput.classList.remove('error');
+        }
+    };
+
+    newPasswordInput.addEventListener('input', validatePasswords);
+    confirmPasswordInput.addEventListener('input', validatePasswords);
+});
+const input = document.getElementById('colorInput');
+  
+  function changeColor() {
+    const length = input.value.length;
+    
+    input.style.color = "#ff0";
+  }
+
+  input.addEventListener('input', changeColor);
+    </script>
+</body>
+
+</html>
